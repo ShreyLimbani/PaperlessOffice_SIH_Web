@@ -13,9 +13,15 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
  <link rel="stylesheet" href="css/mdb.min.css">
-<!--  <link rel="stylesheet" href="css/custom.css"> -->
   <!-- Your custom styles (optional) -->
   <style>
+  	.visible-img {
+    	display: inline-block !important;
+	}
+
+	.invisible-img {
+	    display: none !important;
+	}
 
   </style>
 </head>
@@ -32,7 +38,9 @@
         <!-- Logo -->
         <li class="logo-sn waves-effect py-3">
           <div class="text-center">
-            <a href="#" class="pl-0"><img  width="200px" height="70px" src="frontend/logoNav.jpg"></a>
+            <a href="#" class="pl-0">
+            	<img id="img-black" class="" width="200px" height="40px" src="img/logo_transparent.png">
+            	<img id="img-white" style="display:none" width="200px" height="40px" src="img/logo_transparent_white.png"></a>
           </div>
         </li>
 
@@ -445,6 +453,9 @@
 
         e.preventDefault();
 
+
+        $('#img-black').toggleClass('invisible-img');
+        $('#img-white').toggleClass('visible-img');
         $('footer, .card').toggleClass('dark-card-admin');
         $('body, .navbar').toggleClass('white-skin navy-blue-skin');
         $(this).toggleClass('white text-dark btn-outline-black');
