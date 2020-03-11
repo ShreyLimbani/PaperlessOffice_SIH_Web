@@ -50,7 +50,11 @@ position:absolute;
   <!--Navigation & Intro-->
   <header>
 	
-	
+	<style>
+	.nav-link {
+		scroll-behavior: smooth;
+	}
+	</style>
 	<!--Navbar -->
 	<nav class="mb-1 navbar navbar-expand-lg navbar navbar-dark bg-dark">
 	  <a class="navbar-brand" href="#"><img src="logoNav.jpg" width="200px" height="50px" ></a>
@@ -61,48 +65,25 @@ position:absolute;
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
 		<ul class="navbar-nav mr-auto">
 		  <li class="nav-item active">
-			<a class="nav-link" href="#">Home
-			  <span class="sr-only">(current)</span>
-			</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Features</a>
+			<a class="nav-link" href="#about">About us</a>
+		  </li>	
+		  <li class="nav-item">
+			<a class="nav-link" href="#services">Our services</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Pricing</a>
-		  </li>
-		  <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-			  aria-haspopup="true" aria-expanded="false">Dropdown
-			</a>
-			<div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-			  <a class="dropdown-item" href="#">Action</a>
-			  <a class="dropdown-item" href="#">Another action</a>
-			  <a class="dropdown-item" href="#">Something else here</a>
-			</div>
+			<a class="nav-link" href="#team">Our Team</a>
 		  </li>
 		</ul>
 		<ul class="navbar-nav ml-auto nav-flex-icons">
 		  <li class="nav-item">
 			<a class="nav-link waves-effect waves-light">
-			  <i class="fab fa-twitter"></i>
-			</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link waves-effect waves-light">
-			  <i class="fab fa-google-plus-g"></i>
+			  <i class="fab fa-github   fa-2x "></i>
 			</a>
 		  </li>
 		  <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-			  aria-haspopup="true" aria-expanded="false">
-			  <i class="fas fa-user"></i>
-			</a>
-			<div class="dropdown-menu dropdown-menu-right dropdown-default"
-			  aria-labelledby="navbarDropdownMenuLink-333">
-			  <a class="dropdown-item" href="#">Action</a>
-			  <a class="dropdown-item" href="#">Another action</a>
-			  <a class="dropdown-item" href="#">Something else here</a>
+			 <button class="btn btn-outline-white my-3 my-sm-0 ml-3" type="submit">Login</button>
 			</div>
 		  </li>
 		</ul>
@@ -315,7 +296,7 @@ position:absolute;
     <div class="container">
 
       <!-- Third section -->
-      <section id="lawyers" class="section team-section mb-5">
+      <section id="team" class="section team-section mb-5">
 
         <!-- Section title -->
         <h2 class="green-text text-center text-uppercase font-weight-bold my-5 pt-5 wow fadeIn" data-wow-delay="0.2s">Our Team</h2>
