@@ -47,6 +47,175 @@ position:absolute;
 
 <body>
 
+<!-- Modal -->
+<div class="modal fade" id="loginModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog form-dark" role="document">
+    <!--Content-->
+    <div class="modal-content card card-image green lighten-3" style="">
+      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+        <!--Header-->
+        <div class="modal-header text-center pb-4">
+          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel"><strong>SIGN</strong> <a
+              class="green-text font-weight-bold"><strong> IN</strong></a></h3>
+          <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+          <!--Body-->
+          <div class="md-form mb-5">
+            <input type="email" id="Form-email5" class="form-control validate white-text">
+            <label data-error="wrong" data-success="right" for="Form-email5">Your email</label>
+          </div>
+
+          <div class="md-form pb-3">
+            <input type="password" id="Form-pass5" class="form-control validate white-text">
+            <label data-error="wrong" data-success="right" for="Form-pass5">Your password</label>
+            <div class="form-group mt-4">
+              <input class="form-check-input" type="checkbox" id="checkbox624">
+              <label for="checkbox624" class="white-text form-check-label">Remember Me</label>
+            </div>
+          </div>
+
+          <!--Grid row-->
+          <div class="row d-flex align-items-center mb-4">
+
+            <!--Grid column-->
+            <div class="text-center mb-3 col-md-12">
+              <button type="button" class="btn btn-success btn-block btn-rounded z-depth-1">Sign up</button>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-12">
+              <p class="font-small white-text d-flex justify-content-end">Don't have an account? <a href="#" class="green-text ml-1 font-weight-bold">
+                  Register</a></p>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Modal -->
+
+<div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="SignUpModal" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 green darken-1" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              User Register</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel9" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Authority Register</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+         
+          <!--Panel 8-->
+          <div class="tab-pane fade in show active" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+		  
+		  <div class="tab-pane fade" id="panel9" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput12">YouSDr email</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
   <!--Navigation & Intro-->
   <header>
 	
@@ -83,7 +252,7 @@ position:absolute;
 			</a>
 		  </li>
 		  <li class="nav-item dropdown">
-			 <button class="btn btn-outline-white btn-rounded my-3 my-sm-0 ml-3" type="submit">Login</button>
+			 <a class="btn btn-outline-white btn-rounded my-3 my-sm-0 ml-3" data-toggle="modal" data-target="#loginModel">Login</a>
 			</div>
 		  </li>
 		</ul>
@@ -109,7 +278,7 @@ position:absolute;
 						the formalities of the beurocracies.
 				</strong></h5>
             <div class="mr-auto">
-              <button type="button" font-size="30px" class="btn green btn-rounded ml-0">Authority Login</button>  <button type="button" class="btn light-green btn-rounded ml-0">User Login</button>
+              <button type="button" font-size="30px" class="btn green btn-rounded ml-0" data-toggle="modal" data-target="#SignUpModal">SIGN UP</button>
             </div>
 
 			
@@ -199,7 +368,7 @@ position:absolute;
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-weight-bold mb-2">| Government offices</h5>
-                <p class="grey-text">The government offices uses tonnes of papers in paperwork and all the formalities, this can be changed with E DAFTAR.</p>
+                <p class="grey-text">The government offices uses tonnes of papers in the paperwork and all the formalities, this can be changed with E DAFTAR.</p>
               </div>
             </div>
             <!--/First row-->
@@ -211,7 +380,7 @@ position:absolute;
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-weight-bold mb-2">| Courts</h5>
-                <p class="grey-text">It will be an advancement to the current way of paperworks in court and can get other advantages alongside with E DAFTAR.</p>
+                <p class="grey-text">It will be an advancement in the way of the current paperwork of court occurs and can get other advantages alongside with E DAFTAR.</p>
               </div>
             </div>
             <!--/Second row-->
@@ -229,7 +398,7 @@ position:absolute;
               </div>
               <div class="col-10 mb-2">
                 <h5 class="feature-title font-weight-bold mb-2">| Corporate offices</h5>
-                <p class="grey-text">Coraporates have a lot of beurocracies and paperwork that should follow a strict workflow, all this can be maintained well with E DAFTAR.</p>
+                <p class="grey-text">Coraporates has a lot of beurocracies and paperwork needs to go through strict workflow, all this can be maintained well with E DAFTAR.</p>
               </div>
             </div>
             <!--/First row-->
@@ -314,14 +483,6 @@ position:absolute;
             </div>
             <h4 class="font-weight-bold my-4">Manjot Singh Siddhu</h4>
             <p class="grey-text">Team Leader</p>
-
-            <!--Facebook-->
-            <a type="button" class="btn-floating btn-fb btn-primary"><i class="fab fa-facebook-f"></i></a>
-            <!--Pinterest-->
-            <a type="button" class="btn-floating btn-primary"><i class="fab fa-pinterest"></i></a>
-            <!--Instagram-->
-            <a type="button" class="btn-floating btn-primary"><i class="fab fa-instagram"></i></a>
-
           </div>
           <!--/First column-->
 
@@ -332,14 +493,6 @@ position:absolute;
             </div>
             <h4 class="font-weight-bold my-4">Shrey Limbani</h4>
             <p class="grey-text">Team member</p>
-
-            <!--Google +-->
-            <a type="button" class="btn-floating btn-gplus btn-secondary"><i class="fab fa-google-plus-g"></i></a>
-            <!--Facebook-->
-            <a type="button" class="btn-floating btn-fb btn-secondary"><i class="fab fa-facebook-f"></i></a>
-            <!--GitHub-->
-            <a type="button" class="btn-floating btn-git btn-secondary"><i class="fab fa-github"></i></a>
-
           </div>
           <!--/Second column-->
 
@@ -350,14 +503,6 @@ position:absolute;
             </div>
             <h4 class="font-weight-bold my-4">Siddharth Patel</h4>
             <p class="grey-text">Team member</p>
-
-            <!--Linkedin-->
-            <a type="button" class="btn-floating btn-li btn-primary"><i class="fab fa-linkedin-in"></i></a>
-            <!--Twitter-->
-            <a type="button" class="btn-floating btn-tw btn-primary"><i class="fab fa-twitter"></i></a>
-            <!--Dribbble-->
-            <a type="button" class="btn-floating btn-dribbble btn-primary"><i class="fab fa-dribbble"></i></a>
-
           </div>
           <!--/Third column-->
 
@@ -368,14 +513,6 @@ position:absolute;
             </div>
             <h4 class="font-weight-bold my-4">Aniket Ranjan</h4>
             <p class="grey-text">Team member</p>
-
-            <!--Linkedin-->
-            <a type="button" class="btn-floating btn-li btn-secondary"><i class="fab fa-linkedin-in"></i></a>
-            <!--Twitter-->
-            <a type="button" class="btn-floating btn-tw btn-secondary"><i class="fab fa-twitter"></i></a>
-            <!--Dribbble-->
-            <a type="button" class="btn-floating btn-dribbble btn-secondary"><i class="fab fa-dribbble"></i></a>
-
           </div>
           <!--/Third column-->
 		  
@@ -386,14 +523,6 @@ position:absolute;
             </div>
             <h4 class="font-weight-bold my-4">Aryan Soni</h4>
             <p class="grey-text">Team member</p>
-
-            <!--Linkedin-->
-            <a type="button" class="btn-floating btn-li btn-secondary"><i class="fab fa-linkedin-in"></i></a>
-            <!--Twitter-->
-            <a type="button" class="btn-floating btn-tw btn-secondary"><i class="fab fa-twitter"></i></a>
-            <!--Dribbble-->
-            <a type="button" class="btn-floating btn-dribbble btn-secondary"><i class="fab fa-dribbble"></i></a>
-
           </div>
           <!--/Third column-->
 		  
@@ -404,14 +533,6 @@ position:absolute;
             </div>
             <h4 class="font-weight-bold my-4">Kirthana</h4>
             <p class="grey-text">Team member</p>
-
-            <!--Linkedin-->
-            <a type="button" class="btn-floating btn-li btn-secondary"><i class="fab fa-linkedin-in"></i></a>
-            <!--Twitter-->
-            <a type="button" class="btn-floating btn-tw btn-secondary"><i class="fab fa-twitter"></i></a>
-            <!--Dribbble-->
-            <a type="button" class="btn-floating btn-dribbble btn-secondary"><i class="fab fa-dribbble"></i></a>
-
           </div>
           <!--/Third column-->
 		  
@@ -421,14 +542,6 @@ position:absolute;
             </div>
             <h4 class="font-weight-bold my-4">Bijeesh T V</h4>
             <p class="grey-text">Mentor</p>
-
-            <!--Linkedin-->
-            <a type="button" class="btn-floating btn-li btn-secondary"><i class="fab fa-linkedin-in"></i></a>
-            <!--Twitter-->
-            <a type="button" class="btn-floating btn-tw btn-secondary"><i class="fab fa-twitter"></i></a>
-            <!--Dribbble-->
-            <a type="button" class="btn-floating btn-dribbble btn-secondary"><i class="fab fa-dribbble"></i></a>
-
           </div>
 		  
 		  <div class="col-lg-3 col-md-6 mb-5">
@@ -437,14 +550,6 @@ position:absolute;
             </div>
             <h4 class="font-weight-bold my-4">-</h4>
             <p class="grey-text">-</p>
-
-            <!--Linkedin-->
-            <a type="button" class="btn-floating btn-li btn-secondary"><i class="fab fa-linkedin-in"></i></a>
-            <!--Twitter-->
-            <a type="button" class="btn-floating btn-tw btn-secondary"><i class="fab fa-twitter"></i></a>
-            <!--Dribbble-->
-            <a type="button" class="btn-floating btn-dribbble btn-secondary"><i class="fab fa-dribbble"></i></a>
-
           </div>
 		  
         </div>
@@ -527,7 +632,7 @@ position:absolute;
 			
           <ul class="footer-search list-unstyled">
             <li>
-				<img width="400px" height="300px" src="resources/team_black.png" class="z-depth-1">
+				<img width="400px" height="300px" src="img/team_black.png" class="">
             </li>
           </ul>
 
@@ -543,7 +648,7 @@ position:absolute;
     <!--Copyright-->
     <div class="footer-copyright py-3 text-center">
       <div class="container-fluid">
-        © 2019 Copyright: <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> HexaGeeks </a>
+        © 2019 Copyright: <a href="" target="_blank"> HexaGeeks </a>
       </div>
     </div>
     <!--/Copyright-->
