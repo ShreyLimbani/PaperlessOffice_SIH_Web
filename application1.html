@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Daftar | Applications</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <style>
+    .visible-img {
+      display: inline-block !important;
+    }
+
+    .invisible-img {
+      display: none !important;
+    }
+
+    .card-columns {
+      column-count: 2;
+    }
+
+  </style>
+</head>
+
+<body class="fixed-sn white-skin">
+
+  <!-- Main Navigation -->
+  <header>
+
+    <!-- Sidebar navigation -->
+    <div id="slide-out" class="side-nav  fixed">
+      <ul class="custom-scrollbar">
+
+        <!-- Logo -->
+        <li class="logo-sn waves-effect py-3">
+          <div class="text-center">
+            <a href="#" class="pl-0">
+              <img id="img-black" class="" width="200px" height="40px" src="img/logo_transparent.png">
+              <img id="img-white" style="display:none" width="200px" height="40px"
+                src="img/logo_transparent_white.png"></a>
+          </div>
+        </li>
+
+        <!-- Search Form -->
+        <li>
+          <form class="search-form" role="search">
+            <div class="md-form mt-0 waves-light">
+              <input type="text" class="form-control py-2" placeholder="Search">
+            </div>
+          </form>
+        </li>
+
+        <!-- Side navigation links -->
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a href="Dashboard.html" class="collapsible-header waves-effect active"><i
+                  class="fas fa-home"></i>Home</a>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect arrow-r">
+                <i class="fas fa-hdd"></i>Your Storage<i class="fas fa-angle-down rotate-icon"></i>
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+                    <a href="#" class="waves-effect">Your Documents</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Shared Documents</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Public Documents</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect arrow-r">
+                <i class="fab fa-wpforms"></i>Your Applications<i class="fas fa-angle-down rotate-icon"></i>
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+                    <a href="#" class="waves-effect">Pending Applications</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Approved Applications</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Rejected Applications</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">All Applications</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect arrow-r">
+                <i class="fas fa-network-wired"></i>Workflows<i class="fas fa-angle-down rotate-icon"></i>
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+                    <a href="#" class="waves-effect">Create new workflow</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Workflows</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- Side navigation links -->
+
+          </ul>
+          <div class="sidenav-bg mask-strong"></div>
+    </div>
+    <!-- Sidebar navigation -->
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar double-nav">
+
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
+      </div>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-dn mr-auto">
+        <p>Application</p>
+      </div>
+
+      <div class="d-flex change-mode">
+
+        <div class="ml-auto mb-0 mr-3 change-mode-wrapper">
+          <button class="btn btn-outline-black btn-sm" id="dark-mode">DARK MODE</button>
+        </div>
+
+        <!-- Navbar links -->
+        <ul class="nav navbar-nav ml-auto mr-3">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn-sm" href="#" id="userDropdown" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-plus"></i><span class="clearfix d-none d-sm-inline-block"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">New Document</a>
+              <a class="dropdown-item" href="#">New Application</a>
+            </div>
+          </li>
+
+        </ul>
+        <!-- Navbar links -->
+
+        <!-- Navbar links -->
+        <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Profile</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">Log Out</a>
+              <a class="dropdown-item" href="#">My account</a>
+            </div>
+          </li>
+
+        </ul>
+        <!-- Navbar links -->
+
+      </div>
+
+    </nav>
+    <!-- Navbar -->
+
+  </header>
+  <!-- Main Navigation -->
+
+  <!-- Main layout -->
+  <main>
+    <div class="container">
+        <style>
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+            background-color: #29a329;
+          } 
+        </style>
+        <ul class="nav nav-pills nav-justified" >
+          <li class="nav-item">
+              <a href="#AllApplication" class="nav-link active" data-toggle="tab"><h5 class="font-weight-500 my-1" style="color:black;">All Application</h5></a>
+          </li>
+          <li class="nav-item">
+              <a href="#PendingApplication" class="nav-link" data-toggle="tab"><h5 class="font-weight-500 my-1"  style="color:black;">Pending Application</h5></a>
+          </li>
+          <li class="nav-item">
+              <a href="#ApprovedApplication" class="nav-link" data-toggle="tab"><h5 class="font-weight-500 my-1"  style="color:black;">Approved Application</h5></a>
+          </li>
+          <li class="nav-item">
+            <a href="#RejectedApplication" class="nav-link" data-toggle="tab"><h5 class="font-weight-500 my-1"  style="color:black;">Rejected Application</h5></a>
+        </li>
+      </ul>
+      <hr>
+      <div class="tab-content">
+          <div class="tab-pane fade show active" id="AllApplication">
+            <!-- Section: Applications -->
+              <section class="pb-12">
+                <script>
+                    async function fetchHtmlAsText(url) {
+                        const response = await fetch(url);
+                        return await response.text();
+                    }
+
+                    // this is your `load_home() function`
+                    async function loadHome() {
+                        const contentDiv = document.getElementById("PendingApplication");
+                        contentDiv.innerHTML = await fetchHtmlAsText("home.html");
+                    }
+                    async function loadHome() {
+                        const contentDiv = document.getElementById("ApprovedApplication");
+                        contentDiv.innerHTML = await fetchHtmlAsText("home.html");
+                    }
+                    async function loadHome() {
+                        const contentDiv = document.getElementById("RejectedApplication");
+                        contentDiv.innerHTML = await fetchHtmlAsText("home.html");
+                    }
+                </script>
+              </section>  
+            <!-- Section: data tables -->
+          </div>
+          <div class="tab-pane fade" id="PendingApplication">
+              <!-- Section: Applications -->
+              <section class="pb-12">
+                <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-10 mt-2">
+                          <div class="mx-2">
+                            <h4 class="black-text">Hostel Application Form</h4>
+                          </div>
+                          <div class="mx-2 mt-3">
+                            <p class="grey-text">Submitted by Siddharth Patel on 21/3/2020</p>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class=""><button class="btn btn-outline-default btn-rounded waves-effect">View</button>
+                            <div class="mt-2">
+                              <div class="progress md-progress float-right" style="width: 200px; height:20px;">
+                                <div class="progress-bar progress-bar-striped green progress-bar-animated"
+                                  role="progressbar" style="width: 55%;height: 20px" aria-valuenow="55" aria-valuemin="0"
+                                  aria-valuemax="100">
+                                  3/5
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-10 mt-2">
+                          <div class="mx-2">
+                            <h4 class="black-text">Hostel Application Form</h4>
+                          </div>
+                          <div class="mx-2 mt-3">
+                            <p class="grey-text">Submitted by Siddharth Patel on 21/3/2020</p>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class=""><button class="btn btn-outline-default btn-rounded waves-effect">View</button>
+                            <div class="mt-2">
+                              <div class="progress md-progress float-right" style="width: 200px; height:20px;">
+                                <div class="progress-bar progress-bar-striped green progress-bar-animated"
+                                  role="progressbar" style="width: 55%;height: 20px" aria-valuenow="55" aria-valuemin="0"
+                                  aria-valuemax="100">
+                                  3/5
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
+              </section>  
+            <!-- Section: data tables -->
+          </div>
+          <div class="tab-pane fade" id="ApprovedApplication">
+             <!-- Section: Applications -->
+              <section class="pb-12">
+                <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-10 mt-2">
+                          <div class="mx-2">
+                            <h4 class="black-text">Yellow Application Form</h4>
+                          </div>
+                          <div class="mx-2 mt-3">
+                            <p class="grey-text">Submitted by Siddharth Patel on 21/3/2020</p>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class=""><button class="btn btn-outline-default btn-rounded waves-effect">View</button>
+                            <div class="mt-2">
+                              <div class="progress md-progress float-right" style="width: 200px; height:20px;">
+                                <div class="progress-bar progress-bar-striped green progress-bar-animated"
+                                  role="progressbar" style="width:85%;height: 20px" aria-valuenow="85" aria-valuemin="0"
+                                  aria-valuemax="100">
+                                  4/5
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </section>  
+              <!-- Section: data tables -->
+          </div>
+          <div class="tab-pane fade" id="RejectedApplication">
+            <!-- Section: Applications -->
+             <section class="pb-12">
+               <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-10 mt-2">
+                      <div class="mx-2">
+                        <h4 class="black-text">Yellow Application Form</h4>
+                      </div>
+                      <div class="mx-2 mt-3">
+                        <p class="grey-text">Submitted by Siddharth Patel on 21/3/2020</p>
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class=""><button class="btn btn-outline-default btn-rounded waves-effect">View</button>
+                        <div class="mt-2">
+                          <div class="progress md-progress float-right" style="width: 200px; height:20px;">
+                            <div class="progress-bar progress-bar-striped green progress-bar-animated"
+                              role="progressbar" style="width:85%;height: 20px" aria-valuenow="85" aria-valuemin="0"
+                              aria-valuemax="100">
+                              4/5
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                  </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-10 mt-2">
+                          <div class="mx-2">
+                            <h4 class="black-text">Yellow Application Form</h4>
+                          </div>
+                          <div class="mx-2 mt-3">
+                            <p class="grey-text">Submitted by Siddharth Patel on 21/3/2020</p>
+                          </div>
+                        </div>
+                        <div class="col-2">
+                          <div class=""><button class="btn btn-outline-default btn-rounded waves-effect">View</button>
+                            <div class="mt-2">
+                              <div class="progress md-progress float-right" style="width: 200px; height:20px;">
+                                <div class="progress-bar progress-bar-striped green progress-bar-animated"
+                                  role="progressbar" style="width:85%;height: 20px" aria-valuenow="85" aria-valuemin="0"
+                                  aria-valuemax="100">
+                                  4/5
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       </div>
+                    </div>
+              </div> 
+             </section>  
+             <!-- Section: data tables -->
+         </div>
+      </div>
+    </div>
+
+  </main>
+  <!-- Main layout -->
+
+  <!-- Footer -->
+  <footer class="page-footer pt-0 mt-5 rgba-stylish-light">
+
+    <!-- Copyright -->
+    <div class="footer-copyright py-3 text-center">
+      <div class="container-fluid">
+        © 2019 Copyright: <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> Hexageeks</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- Footer -->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+  <!-- Initializations -->
+  <script>
+
+    // SideNav Initialization
+    $(".button-collapse").sideNav();
+
+    var container = document.querySelector('.custom-scrollbar');
+    Ps.initialize(container, {
+      wheelSpeed: 2,
+      wheelPropagation: true,
+      minScrollbarLength: 20
+    });
+
+    $(function () {
+      $('#dark-mode').on('click', function (e) {
+
+        e.preventDefault();
+
+
+        $('#img-black').toggleClass('invisible-img');
+        $('#img-white').toggleClass('visible-img');
+        $('footer, .card').toggleClass('dark-card-admin');
+        $('body, .navbar').toggleClass('white-skin navy-blue-skin');
+        $(this).toggleClass('white text-dark btn-outline-black');
+        $('body').toggleClass('dark-bg-admin');
+        $('h6, .card, p, td, th, i, li a, h4, input, label').not('#slide-out i, #slide-out a, .dropdown-item i, .dropdown-item').toggleClass('text-white');
+        $('.btn-dash').toggleClass('grey blue').toggleClass('lighten-3 darken-3');
+        $('.gradient-card-header').toggleClass('white black lighten-4');
+        $('.list-panel a').toggleClass('navy-blue-bg-a text-white').toggleClass('list-group-border');
+        $('.custom-dark').toggleClass('white-text unique-color-dark lighten-3 darken-3 text-white')
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
