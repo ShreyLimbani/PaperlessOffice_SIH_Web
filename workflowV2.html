@@ -193,35 +193,8 @@
           <input type="text" id="form1" class="form-control"><br>
           <label for="form1" id="form2" style="color: white;">WORKFLOW NAME</label>
         </div>
-        <div id="Stages" class="md-form">
-            <div class="row"></div>
-            <form action="/action_page.php" method="get">
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="row">
-                            <div class="col-sm">
-                                 <p  id="rcorners"></p>
-                            </div>
-                            <div class="col-sm">
-                                 <p class="col-sm" id="stageNo">1</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <input class="col-sm" list="Authorities"  placeholder="Authority Name" name="AuthorityName" id="AuthorityName">
-                        <datalist id="Authorities">
-                        <option value="Sid">
-                        <option value="Shrey">
-                        <option value="Manjot">
-                        <option value="Aniket">
-                        <option value="Kirthana">
-                        </datalist>
-                    </div>
-                </div>
-            </form>
-            </div>
-        </div>
-        <style>
+      </p>
+      <style>
           #WorkflowName {
             border-radius: 25px;
             background:	 #29a329;
@@ -239,45 +212,42 @@
             font-size: 30px;
             color: white;
           }
-          #Stages {
-            border-radius: 25px;
-            background:	 White;
-            border: 1px solid black;
-            width: auto;
-            height: 100px; 
-          }
-          #AuthorityName {
-            margin-left: 25px;
-            font-size: 25px;
-            color: black;
-            margin-top: 2px;
-          }
-          #rcorners {
-            border-radius: 25px 0px 0px 25px;
-            background: #29a329;
-            padding: 20px; 
-            width: 20px;
-            height: 100px; 
-          }
-          #stageNo {
-            border-radius: 50px 50px 50px 50px;
-            background: #29a329;
-            margin-top: 25px;
-            padding: 20px; 
-            width: 20px;
-            height: 20px; 
-          }
-          
-         </style>
+      </style>
     </div>
     <div class="container">
-      
+      <div class="table-responsive-md"></div>
+        <table class="table table-striped table-hover" id="workflow">
+          <thead class="thead- green">
+              <tr>
+                  <th>Stage</th>
+                  <th>Name</th>
+                  <th></th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>1</td>
+                <td>Authority Name 1</td>
+                <td>:::</td>
+                <td><button type="button" font-size="40px" class="btn green btn-rounded ml-0" onclick="DeleteRow(this)">Delete</button></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Authority Name 2</td>
+                <td>:::</td>
+                <td><button type="button" font-size="40px" class="btn green btn-rounded ml-0" onclick="DeleteRow(this)">Delete</button></td>
+              </tr>
+          </tbody>
+        </table>
+      <div>
       <button type="button" font-size="40px" class="btn green btn-rounded ml-0" data-toggle="modal"  onclick="myFunction()">ADD NEW STAGE</button>
     </div>
   </main>
   <script>
-    function DeleteRow(){
-      table.insertRow($this);
+    function DeleteRow(o){
+      var p=o.parentNode.parentNode;
+         p.parentNode.removeChild(p);
     }
     function myFunction() {
       var totalRowCount = 0;
@@ -296,9 +266,11 @@
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);
       var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
       cell1.innerHTML = rowCount;
       cell2.innerHTML = "Name";      
       cell3.innerHTML = ":::";
+      cell4.innerHTML = '<td><button type="button" font-size="40px" class="btn green btn-rounded ml-0" onclick="DeleteRow(this)">Delete</button></td>';
     }
   </script>
   <!-- Main layout -->
