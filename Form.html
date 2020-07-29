@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Daftar | Forms</title>
+  <!-- HandleBar URL -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -224,21 +226,20 @@
             }
         </style>
         
-        <script id="add_authority" type="text/template">
-            <div class="row m-3 p-3">
-                <div class="col-1">
-                {% verbatim %} <h4>{{ authority_count }}</h4> {% endverbatim %}
-                </div>
-                <div class="col-7" style="text-align:left">
-                <select class="browser-default custom-select">
-                    <option selected>Select Authority</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-                </div>
-                <div class="col" style="text-align:right">
-                <a class="btn-floating btn-sm btn-success" onclick="DeleteRow(this)"><i class="fas fa-minus-circle"></i></a>
+        <script id="add_option_radio" type="text/template">
+            <div class="row m-3">
+                <div class="col-10">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios">
+                        <label class="form-check-label" for="materialGroupExample2">
+                            <div class="md-form mt-0">
+                                <input type="text" class="form-control" placeholder="Enter the option">
+                            </div>
+                        </label>
+                    </div>
+                </div>    
+                <div class="col-1" style="text-align:right">
+                    <a class="btn-floating btn-sm btn-success" onclick="DeleteRow(this)"><i class="fas fa-minus-circle"></i></a>
                 </div>
             </div>
         </script>
@@ -257,7 +258,7 @@
                         </div>
                     </div>
                     <div class="row m-3">
-                      <div class="options">
+                      <div id="radio_options">
                         <div class="row m-3">
                             <div class="col-10">    
                                 <div class="form-check">
@@ -268,9 +269,6 @@
                                         </div>
                                     </label>
                                 </div>
-                            </div>
-                            <div class="col-1" style="text-align:right">
-                                <a class="btn-floating btn-sm btn-success" onclick="DeleteRow(this)"><i class="fas fa-minus-circle"></i></a>
                             </div>
                         </div>
                         <br>
@@ -285,15 +283,12 @@
                                     </label>
                                 </div>
                             </div>    
-                            <div class="col-1" style="text-align:right">
-                                <a class="btn-floating btn-sm btn-success" onclick="DeleteRow(this)"><i class="fas fa-minus-circle"></i></a>
-                            </div>
                         </div>    
                         <br>
                       </div>
                     </div>    
                     <div class="col-6" style="text-align:left">
-                       <button type="button" font-size="40px" class="btn green btn-rounded ml-0" id="add_authority_button">Add an option</button>
+                       <button type="button" font-size="40px" class="btn green btn-rounded ml-0" id="add_option_radio_button">Add an option</button>
                     </div>
                 </div>
             </div>
@@ -387,7 +382,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-12 mr-3">
+                    <div class="col-8 mr-3">
                         <div class="md-form">
                             <input id="input_txt" placeholder="Enter the text" type="text" length="100" style="margin: 10px;" class="form-control">
                         </div>
@@ -416,11 +411,10 @@
   <!-- Main layout -->
   <script>
     var authority_count = 1;
-    const authority_template = Handlebars.compile(document.querySelector('#add_authority').innerHTML);
-    document.querySelector('#add_authority_button').onclick = () => {
-      authority_count++;
-      const new_authority = authority_template({'authority_count': authority_count});
-      document.querySelector('#authority_list').innerHTML += new_authority;
+    const option_field_template = Handlebars.compile(document.querySelector('#add_option_radio').innerHTML);
+    document.querySelector('#add_option_radio_button').onclick = () => {
+      const new_option = option_field_template();
+      document.querySelector('#radio_options').innerHTML += new_option;
     }
 
     function DeleteRow(o){
@@ -448,6 +442,8 @@
   <!-- Footer -->
 
   <!-- SCRIPTS -->
+  <!-- HandleBar URL -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
