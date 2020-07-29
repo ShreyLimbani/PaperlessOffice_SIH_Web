@@ -224,6 +224,12 @@
             .btn{
                 color: black;
             }
+            .form-control{
+                 padding: .0rem .0rem;
+            }
+            .md-form .form-control {
+              padding: .0rem 0 .0rem;
+            }
         </style>
         
         <script id="add_option_radio" type="text/template">
@@ -243,6 +249,23 @@
                 </div>
             </div>
         </script>
+        <script id="add_option_checkbox" type="text/template">
+          <div class="row m-3">
+              <div class="col-10">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                  <label class="custom-control-label" for="defaultInline1">
+                      <div class="md-form mt-0">
+                          <input type="text" class="form-control" placeholder="Enter the Option">
+                      </div>
+                  </label>
+                </div>
+              </div>    
+              <div class="col-1" style="text-align:right">
+                  <a class="btn-floating btn-sm btn-success" onclick="DeleteRow(this)"><i class="fas fa-minus-circle"></i></a>
+              </div>
+          </div>
+      </script>
         <br>
         <form name="mcq" action="">
             <div class="card border-success" style="max-width: 100%;">
@@ -307,35 +330,35 @@
                         </div>
                     </div>
                     <div class="row m-3">
-                      <div class="checkboxs">  
-                          <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="defaultInline1">
-                            <label class="custom-control-label" for="defaultInline1">
-                                <div class="md-form mt-0">
-                                    <input type="text" class="form-control" placeholder="Enter the Option">
-                                </div>
-                            </label>
+                      <div id="checkbox_options" class="checkboxs">  
+                        <div class="row m-3">
+                          <div class="col-10">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                                <label class="custom-control-label" for="defaultInline1">
+                                    <div class="md-form mt-0">
+                                        <input type="text" class="form-control" placeholder="Enter the Option">
+                                    </div>
+                                </label>
+                              </div>
+                            </div>  
                           </div>
-                          <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="defaultInline2">
-                            <label class="custom-control-label" for="defaultInline2">
-                                <div class="md-form mt-0">
-                                    <input type="text" class="form-control" placeholder="Enter the Option">
-                                </div>
-                            </label>
-                          </div>
-                          <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="defaultInline3">
-                            <label class="custom-control-label" for="defaultInline3">
-                                <div class="md-form mt-0">
-                                    <input type="text" class="form-control" placeholder="Enter the Option">
-                                </div>
-                            </label>
-                          </div>
+                          <div class="row m-3">
+                            <div class="col-10">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                                <label class="custom-control-label" for="defaultInline1">
+                                    <div class="md-form mt-0">
+                                        <input type="text" class="form-control" placeholder="Enter the Option">
+                                    </div>
+                                </label>
+                              </div>
+                            </div> 
+                           </div>  
                         </div>  
                     </div>    
                     <div class="col-6" style="text-align:left">
-                       <button type="button" font-size="40px" class="btn green btn-rounded ml-0" id="add_authority_button">Add an option</button>
+                       <button type="button" font-size="40px" class="btn green btn-rounded ml-0" id="add_option_checkbox_button">Add an option</button>
                     </div>
                 </div>
             </div>
@@ -411,10 +434,16 @@
   <!-- Main layout -->
   <script>
     var authority_count = 1;
-    const option_field_template = Handlebars.compile(document.querySelector('#add_option_radio').innerHTML);
+    const option_field_radio_template = Handlebars.compile(document.querySelector('#add_option_radio').innerHTML);
     document.querySelector('#add_option_radio_button').onclick = () => {
-      const new_option = option_field_template();
+      const new_option = option_field_radio_template();
       document.querySelector('#radio_options').innerHTML += new_option;
+    }
+
+    const option_field_checkbox_template = Handlebars.compile(document.querySelector('#add_option_checkbox').innerHTML);
+    document.querySelector('#add_option_checkbox_button').onclick = () => {
+      const new_option = option_field_checkbox_template();
+      document.querySelector('#checkbox_options').innerHTML += new_option;
     }
 
     function DeleteRow(o){
