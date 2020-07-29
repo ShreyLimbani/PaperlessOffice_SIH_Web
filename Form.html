@@ -190,7 +190,7 @@
   <main>
     <div class="container">
         <div id="formDetails" class="md-form row">
-        	<div class="col-12">
+        	<div class="col-5">
             <input type="text" id="formName" style="font-size: 30px; color: white;" class="formInput form-control" name="formName"><br>
             <label for="formName" class="formInputLabel" style="color: white;">Form Name</label>
         	</div>
@@ -206,9 +206,8 @@
               padding: 10px; 
               width: auto;
             }
-            #formDesc::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            #formDesc::placeholder { 
                 color: white;
-                opacity: 1; /* Firefox */
             }
             .formInputLabel {
               margin-left: 20px;
@@ -219,6 +218,9 @@
             .formInput {
               font-size: 15px;
               color: white;
+            }
+            .btn{
+                color: black;
             }
         </style>
         
@@ -255,31 +257,39 @@
                         </div>
                     </div>
                     <div class="row m-3">
-                      <div class="options">  
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input success" id="materialGroupExample1" name="groupOfMaterialRadios"  checked>
-                            <label class="form-check-label" for="materialGroupExample1">
-                                <div class="md-form mt-0">
-                                    <input type="text" class="form-control" placeholder="Enter the option">
+                      <div class="options">
+                        <div class="row m-3">
+                            <div class="col-10">    
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input success" id="materialGroupExample1" name="groupOfMaterialRadios"  checked>
+                                    <label class="form-check-label" for="materialGroupExample1">
+                                        <div class="md-form mt-0">
+                                            <input type="text" class="form-control" placeholder="Enter the option">
+                                        </div>
+                                    </label>
                                 </div>
-                            </label>
-                        </div><br>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios">
-                            <label class="form-check-label" for="materialGroupExample2">
-                                <div class="md-form mt-0">
-                                    <input type="text" class="form-control" placeholder="Enter the option">
-                                </div>
-                            </label>
-                        </div><br>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
-                            <label class="form-check-label" for="materialGroupExample3">
-                                <div class="md-form mt-0">
-                                    <input type="text" class="form-control" placeholder="Enter the Option">
-                                </div>
-                            </label>
+                            </div>
+                            <div class="col-1" style="text-align:right">
+                                <a class="btn-floating btn-sm btn-success" onclick="DeleteRow(this)"><i class="fas fa-minus-circle"></i></a>
+                            </div>
                         </div>
+                        <br>
+                        <div class="row m-3">
+                            <div class="col-10">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios">
+                                    <label class="form-check-label" for="materialGroupExample2">
+                                        <div class="md-form mt-0">
+                                            <input type="text" class="form-control" placeholder="Enter the option">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>    
+                            <div class="col-1" style="text-align:right">
+                                <a class="btn-floating btn-sm btn-success" onclick="DeleteRow(this)"><i class="fas fa-minus-circle"></i></a>
+                            </div>
+                        </div>    
+                        <br>
                       </div>
                     </div>    
                     <div class="col-6" style="text-align:left">
@@ -369,11 +379,11 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <select id="txt_type" class="browser-default custom-select" onclick="SetInputType(this)">
+                            <select id="selected_type" class="browser-default custom-select" onchange="SetInputType(this)">
                                 <option selected>Select the answer type</option>
                                 <option value="Email">Email</option>
                                 <option value="Number">Number</option>
-                                <option value="Number">Date</option>       
+                                <option value="Date">Date</option>       
                             </select>
                         </div>
                     </div>
@@ -386,16 +396,17 @@
             </div>
         </form>
         <script>
-            function SetInputType(txt_type) {
-                var enteredtxt = document.getElementById("input_txt");
-                var txt;
-                txt = document.createElement('INPUT');
-                if (txt_type.value == "Email") {
-                    txt.setAttribute('TYPE', 'Email');
+            function SetInputType(selected_type) {
+                var field = document.getElementById("input_txt");               
+                if (selected_type.value == "Email") {
+                    field.setAttribute('TYPE', 'Email');
                 }
-                if (txt_type.value == "Number") {
-                    txt.setAttribute('TYPE', 'Number');
+                else if (selected_type.value == "Number") {
+                    field.setAttribute('TYPE', 'Number');
                 }
+                else if (selected_type.value == "Date") {
+                    field.setAttribute('TYPE', 'date');
+                }  
             }
         </script>
 
