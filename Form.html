@@ -189,38 +189,39 @@
   <!-- Main layout -->
   <main>
     <div class="container">
-        <div id="WorkflowName" class="md-form">
-            <input type="text" id="form1" class="form-control"><br>
-            <label for="form1" id="form2" style="color: white;">Form Name</label>
+        <div id="formDetails" class="md-form row">
+        	<div class="col-12">
+            <input type="text" id="formName" style="font-size: 30px; color: white;" class="formInput form-control" name="formName"><br>
+            <label for="formName" class="formInputLabel" style="color: white;">Form Name</label>
+        	</div>
+        	<div class="col-12">
+                <input type="text" id="formDesc" placeholder="Form Description" style="color: white; font-size: 15;" class="formInput form-control" name="formDesc">
+        	</div>
         </div>
+
         <style>
-            #WorkflowName {
+            #formDetails {
               border-radius: 25px;
               background:	 #29a329;
-              padding: 20px; 
+              padding: 10px; 
               width: auto;
-              height: 100px; 
             }
-            #form2 {
+            #formDesc::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: white;
+                opacity: 1; /* Firefox */
+            }
+            .formInputLabel {
               margin-left: 20px;
-              margin-top: 5px;
-              font-size: 25px;
-            }
-            #form1 {
               margin-top: 2px;
-              font-size: 30px;
+              font-size: 25px;
               color: white;
             }
-            .form-check input[type=radio]:checked + label:after {
-            border-radius: 50px;
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            content: " ";
-            display: block;
-            background: rgb(11, 245, 62);
+            .formInput {
+              font-size: 15px;
+              color: white;
             }
         </style>
+        
         <script id="add_authority" type="text/template">
             <div class="row m-3 p-3">
                 <div class="col-1">
@@ -239,35 +240,6 @@
                 </div>
             </div>
         </script>
-        <form name="new_workflow" action="">
-            <div class="card border-success" style="max-width: 100%;">
-                <div class="card-body text-success" id="authority_list">
-                    <div class="row m-3">
-                        <div class="col-1">
-                            <h4>1</h4>
-                        </div>
-                        <div class="col-7" style="text-align:left">
-                            <select class="browser-default custom-select">
-                                <option selected>Select Authority</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer bg-transparent border-success">
-                    <div class="row">
-                    <div class="col-6" style="text-align:left">
-                        <button type="button" font-size="40px" class="btn green btn-rounded ml-0" id="add_authority_button">ADD NEW STAGE</button>
-                    </div>
-                    <div class="col-6" style="text-align:right">
-                        <button type="button" font-size="40px" class="btn green btn-rounded ml-0" id="create_workflow">Create Workflow</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </form>
         <br>
         <form name="mcq" action="">
             <div class="card border-success" style="max-width: 100%;">
@@ -397,21 +369,35 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <select class="browser-default custom-select">
+                            <select id="txt_type" class="browser-default custom-select" onclick="SetInputType(this)">
                                 <option selected>Select the answer type</option>
-                                <option value="1">Email</option>
-                                <option value="2">Number</option>
+                                <option value="Email">Email</option>
+                                <option value="Number">Number</option>
+                                <option value="Number">Date</option>       
                             </select>
                         </div>
                     </div>
                     <div class="col-12 mr-3">
                         <div class="md-form">
-                            <input id="input-char-counter" placeholder="Enter the text" type="text" length="100" style="margin: 10px;" class="form-control">
+                            <input id="input_txt" placeholder="Enter the text" type="text" length="100" style="margin: 10px;" class="form-control">
                         </div>
                     </div>
                 </div>
             </div>
         </form>
+        <script>
+            function SetInputType(txt_type) {
+                var enteredtxt = document.getElementById("input_txt");
+                var txt;
+                txt = document.createElement('INPUT');
+                if (txt_type.value == "Email") {
+                    txt.setAttribute('TYPE', 'Email');
+                }
+                if (txt_type.value == "Number") {
+                    txt.setAttribute('TYPE', 'Number');
+                }
+            }
+        </script>
 
     </div>
 
