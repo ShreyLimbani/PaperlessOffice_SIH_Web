@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Daftar | Forms</title>
+  <!-- HandleBar URL -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <style>
+    .visible-img {
+      display: inline-block !important;
+    }
+
+    .invisible-img {
+      display: none !important;
+    }
+
+    .card-columns {
+      column-count: 2;
+    }
+
+  </style>
+</head>
+
+<body class="fixed-sn white-skin">
+
+  <!-- Main Navigation -->
+  <header>
+
+    <!-- Sidebar navigation -->
+    <div id="slide-out" class="side-nav  fixed">
+      <ul class="custom-scrollbar">
+
+        <!-- Logo -->
+        <li class="logo-sn waves-effect py-3">
+          <div class="text-center">
+            <a href="#" class="pl-0">
+              <img id="img-black" class="" width="200px" height="40px" src="img/logo_transparent.png">
+              <img id="img-white" style="display:none" width="200px" height="40px"
+                src="img/logo_transparent_white.png"></a>
+          </div>
+        </li>
+
+        <!-- Search Form -->
+        <li>
+          <form class="search-form" role="search">
+            <div class="md-form mt-0 waves-light">
+              <input type="text" class="form-control py-2" placeholder="Search">
+            </div>
+          </form>
+        </li>
+
+        <!-- Side navigation links -->
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a href="Dashboard.html" class="collapsible-header waves-effect active"><i
+                  class="fas fa-home"></i>Home</a>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect arrow-r">
+                <i class="fas fa-hdd"></i>Your Storage<i class="fas fa-angle-down rotate-icon"></i>
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+                    <a href="#" class="waves-effect">Your Documents</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Shared Documents</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Public Documents</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect arrow-r">
+                <i class="fab fa-wpforms"></i>Your Applications<i class="fas fa-angle-down rotate-icon"></i>
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+                    <a href="#" class="waves-effect">Pending Applications</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Approved Applications</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Rejected Applications</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">All Applications</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="collapsible-header waves-effect arrow-r">
+                <i class="fas fa-network-wired"></i>Workflows<i class="fas fa-angle-down rotate-icon"></i>
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+                    <a href="#" class="waves-effect">Create new workflow</a>
+                  </li>
+                  <li>
+                    <a href="#" class="waves-effect">Workflows</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- Side navigation links -->
+
+          </ul>
+          <div class="sidenav-bg mask-strong"></div>
+    </div>
+    <!-- Sidebar navigation -->
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar double-nav">
+
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
+      </div>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-dn mr-auto">
+        <p>Fill an application</p>
+      </div>
+
+      <div class="d-flex change-mode">
+
+        <div class="ml-auto mb-0 mr-3 change-mode-wrapper">
+          <button class="btn btn-outline-black btn-sm" id="dark-mode">DARK MODE</button>
+        </div>
+
+        <!-- Navbar links -->
+        <ul class="nav navbar-nav ml-auto mr-3">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn-sm" href="#" id="userDropdown" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-plus"></i><span class="clearfix d-none d-sm-inline-block"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">New Document</a>
+              <a class="dropdown-item" href="#">New Application</a>
+            </div>
+          </li>
+
+        </ul>
+        <!-- Navbar links -->
+
+        <!-- Navbar links -->
+        <ul class="nav navbar-nav nav-flex-icons ml-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Profile</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="#">Log Out</a>
+              <a class="dropdown-item" href="#">My account</a>
+            </div>
+          </li>
+
+        </ul>
+        <!-- Navbar links -->
+
+      </div>
+
+    </nav>
+    <!-- Navbar -->
+
+  </header>
+  <!-- Main Navigation -->
+<style>
+	#formDetails {
+	  border-radius: 25px;
+	  background:	 #29a329;
+	  padding: 10px; 
+	  width: auto;
+	}
+	#formDesc::placeholder { 
+	    color: #d9d9d9;
+	}
+	.formInputLabel {
+	  margin-left: 20px;
+	  margin-top: 2px;
+	  font-size: 25px;
+	  color: white;
+	}
+	.formInput {
+	  font-size: 15px;
+	  color: white;
+	}
+	.btn{
+	    color: black;
+	}
+	.form-control{
+	     padding: .0rem .0rem;
+	}
+	.md-form .form-control {
+	  padding: .0rem 0 .0rem;
+	}
+  #formDetails{
+    box-shadow: 0px 2px 5px #666;
+  }
+  #rcorner {
+    border-radius: 0px 15px 0px 15px;
+    background: green;
+    margin-top: 30%;
+    padding: 15px; 
+    width: 20px;
+    height: 20px; 
+  }
+
+</style>
+  <!-- Main layout -->
+
+  <main>
+    <div class="container">
+        <div id="formDetails" class="md-form row">
+        	<div class="col-8 ml-8" style=" color:white ;font-size: 50px; font-family: 'Times New Roman', Times, serif;">
+              E-Application
+          </div>
+        </div> 
+        <!-- Types of Applications -->
+        <div class="card m-2" style="max-width: 100%; background-color: white;">
+          <div class="card-body text-success">
+            <div class="row">
+              <div class="col-1">
+                <p id="rcorner"></p>
+              </div>
+              <div class="col-9" style=" margin-top: 0.7%; text-align:left; color: black; font-size: 30px;">
+                Leave Application
+              </div>
+              <div>
+                  <button type="button" style="font-size=20px;" class="btn green btn-rounded" onclick=""><b>Fill</b></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card m-2" style="max-width: 100%; background-color: white;">
+          <div class="card-body text-success">
+            <div class="row">
+              <div class="col-1">
+                <p id="rcorner"></p>
+              </div>
+              <div class="col-9" style=" margin-top: 0.7%; text-align:left; color: black; font-size: 30px;">
+                Marks Application
+              </div>
+              <div>
+                <button type="button" style="font-size=20px;" class="btn green btn-rounded" onclick=""><b>Fill</b></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card m-2" style="max-width: 100%; background-color: white;">
+          <div class="card-body text-success">
+            <div class="row">
+              <div class="col-1">
+                <p id="rcorner"></p>
+              </div>
+              <div class="col-9" style=" margin-top: 0.7%; text-align:left; color: black; font-size: 30px;">
+                Scholarship Application
+              </div>
+              <div>
+                <button type="button" style="font-size=20px;" class="btn green btn-rounded" onclick=""><b>Fill</b></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="questions" style="margin-bottom:50px; ">
+        	
+        </div>
+        
+        <br>
+    </div>
+
+  </main>
+
+  	
+  	<!-- Radio Question Template -->
+  	<script id="add_radio_question" type="text/template">
+  		<div class="card border-success m-2" style="max-width: 100%;">
+            <div class="card-body text-success">
+                <div class="row m-3">
+                    <div class="col-1">
+                        <h3 style="font-size: 30px;">{{ question_number }}</h3>
+                    </div>
+                    <div class="col-7" style="text-align:left;">
+                        <div class="md-form">
+                            <input placeholder="Enter the question" type="text" id="inputPlaceholderEx" style="color: black; font-size: 20px;" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-3">
+                  <div id="radio_options">
+                    <div class="row m-3">
+                        <div class="col-10">    
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input success" id="materialGroupExample1" name="groupOfMaterialRadios"  checked>
+                                <label class="form-check-label" for="materialGroupExample1">
+                                    <div class="md-form mt-0">
+                                        <input type="text" class="form-control" placeholder="Enter the option">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row m-3">
+                        <div class="col-10">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios">
+                                <label class="form-check-label" for="materialGroupExample2">
+                                    <div class="md-form mt-0">
+                                        <input type="text" class="form-control" placeholder="Enter the option">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>    
+                    </div>    
+                    <br>
+                  </div>
+                </div>    
+                <div class="col-6" style="text-align:left">
+                   <button type="button" font-size="40px" class="btn green btn-rounded ml-0" onclick="add_option_radio(this)">Add an option</button>
+                </div>
+            </div>
+        </div>
+  	</script>
+
+  	<script id="add_checkbox_question" type="text/template">
+  		<div class="card border-success m-2" style="max-width: 100%;">
+                <div class="card-body text-success">
+                    <div class="row m-3 p-3">
+                        <div class="col-1">
+                            <h3 style="font-size: 30px;">{{ question_number }}</h3>
+                        </div>
+                        <div class="col-7" style="text-align:left;">
+                            <div class="md-form">
+                                <input placeholder="Enter the question" type="text" id="inputPlaceholderEx" style="color: black; font-size: 20px;" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-3">
+                      <div id="checkbox_options" class="checkboxs">  
+                        <div class="row m-3">
+                          <div class="col-10">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                                <label class="custom-control-label" for="defaultInline1">
+                                    <div class="md-form mt-0">
+                                        <input type="text" class="form-control" placeholder="Enter the Option">
+                                    </div>
+                                </label>
+                              </div>
+                            </div>  
+                          </div>
+                          <div class="row m-3">
+                            <div class="col-10">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                                <label class="custom-control-label" for="defaultInline1">
+                                    <div class="md-form mt-0">
+                                        <input type="text" class="form-control" placeholder="Enter the Option">
+                                    </div>
+                                </label>
+                              </div>
+                            </div> 
+                           </div>  
+                        </div>  
+                    </div>    
+                    <div class="col-6" style="text-align:left">
+                       <button type="button" font-size="40px" class="btn green btn-rounded ml-0" onclick="add_option_checkbox(this)">Add an option</button>
+                    </div>
+                </div>
+            </div>
+  	</script>
+
+  	<script id="add_short_answer_question" type="text/template">
+  		<div class="card border-success m-2" style="max-width: 100%;">
+        <div class="card-body text-success">
+          <div class="row m-3">
+            <div class="col-1">
+              <h3 style="font-size: 30px;">{{{ question_number }}}</h3>
+            </div>
+            <div class="col-7" style="text-align:left;">
+              <div class="md-form">
+                <input placeholder="Enter the question" type="text" id="inputPlaceholderEx" style="color: black; font-size: 20px;" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="col-11 mr-4">
+            <div class="form-group green-border-focus" style="margin-left: 40px;">
+             	<textarea class="form-control" placeholder="Enter text here" id="longAnswer" rows="3"></textarea>
+           	</div>
+          </div>
+        </div>
+      </div>
+  	</script>
+
+  	<script id="add_multiple_type_question" type="text/template">
+  		<div class="card border-success m-2" style="max-width: 100%;">
+                <div class="card-body text-success">
+                    <div class="row m-3">
+                        <div class="col-1">
+                            <h3 style="font-size: 30px;">{{ question_number }}</h3>
+                        </div>
+                        <div class="col-7" style="text-align:left;">
+                            <div class="md-form">
+                                <input placeholder="Enter the question" type="text" id="inputPlaceholderEx" style="color: black; font-size: 20px;" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <select id="selected_type" class="browser-default custom-select" onchange="SetInputType(this)">
+                                <option selected>Select the answer type</option>
+                                <option value="Email">Email</option>
+    	                            <option value="Number">Number</option>
+                                <option value="Date">Date</option>       
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-8 mr-3">
+                        <div class="md-form">
+                            <input id="input_txt" placeholder="Enter the text" type="text" length="100" style="margin: 10px;" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+  	</script>
+
+  	<script id="add_option_radio" type="text/template">
+	    <div class="row m-3">
+	        <div class="col-10">
+	            <div class="form-check">
+	                <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios">
+	                <label class="form-check-label" for="materialGroupExample2">
+	                    <div class="md-form mt-0">
+	                        <input type="text" class="form-control" placeholder="Enter the option">
+	                    </div>
+	                </label>
+	            </div>
+	        </div>    
+	        <div class="col-1" style="text-align:right">
+	            <a class="btn-floating btn-sm btn-success" onclick="DeleteRow(this)"><i class="fas fa-minus-circle"></i></a>
+	        </div>
+	    </div>
+	</script>
+
+	<script id="add_option_checkbox" type="text/template">
+	  <div class="row m-3">
+	      <div class="col-10">
+	        <div class="custom-control custom-checkbox">
+	          <input type="checkbox" class="custom-control-input" id="defaultInline1">
+	          <label class="custom-control-label" for="defaultInline1">
+	              <div class="md-form mt-0">
+	                  <input type="text" class="form-control" placeholder="Enter the Option">
+	              </div>
+	          </label>
+	        </div>
+	      </div>    
+	      <div class="col-1" style="text-align:right">
+	          <a class="btn-floating btn-sm btn-success" onclick="DeleteRow(this)"><i class="fas fa-minus-circle"></i></a>
+	      </div>
+	  </div>
+  	</script>
+
+  	<script>
+
+    const checkbox_question_template = Handlebars.compile(document.querySelector('#add_checkbox_question').innerHTML);
+    const option_field_checkbox_template = Handlebars.compile(document.querySelector('#add_option_checkbox').innerHTML);
+    const radio_question_template = Handlebars.compile(document.querySelector('#add_radio_question').innerHTML);
+	  const option_field_radio_template = Handlebars.compile(document.querySelector('#add_option_radio').innerHTML);
+	  const short_answer_question_template = Handlebars.compile(document.querySelector('#add_short_answer_question').innerHTML);
+	  const multiple_type_question_template = Handlebars.compile(document.querySelector('#add_multiple_type_question').innerHTML);
+
+	var question_count = 0;
+
+	function add_option_checkbox(o){
+      const new_option = option_field_checkbox_template();
+      o.parentElement.parentElement.children[1].children[0].innerHTML += new_option;
+	}
+
+	function add_option_radio(o){
+      const new_option = option_field_radio_template();
+      o.parentElement.parentElement.children[1].children[0].innerHTML += new_option;
+	}
+
+    
+    document.querySelector('#add_question_radio_button').onclick = () => {
+      question_count++;
+      if(question_count==1)
+      {
+        document.querySelector('#add_message').remove();
+      }
+      const new_question = radio_question_template({'question_number':question_count});
+      document.querySelector('#questions').innerHTML += new_question;
+    }
+	
+	document.querySelector('#add_question_checkbox_button').onclick = () => {
+    question_count++;
+    if(question_count==1)
+    {
+      document.querySelector('#add_message').remove();
+    }
+		const new_question = checkbox_question_template({'question_number':question_count});
+		document.querySelector('#questions').innerHTML += new_question;
+	}
+
+	document.querySelector('#add_question_short_answer_button').onclick = () => {
+    question_count++;
+    if(question_count==1)
+    {
+      document.querySelector('#add_message').remove();
+    }
+		const new_question = short_answer_question_template({'question_number':question_count});
+		document.querySelector('#questions').innerHTML += new_question;
+	}
+
+	document.querySelector('#add_question_multiple_type_button').onclick = () => {
+    question_count++;
+    if(question_count==1)
+    {
+      document.querySelector('#add_message').remove();
+    }
+		const new_question = multiple_type_question_template({'question_number':question_count});
+		document.querySelector('#questions').innerHTML += new_question;
+	}
+
+    function DeleteRow(o){
+      var p=o.parentNode.parentNode;
+         p.parentNode.removeChild(p);
+      authority_count = document.querySelector('#authority_list').childElementCount;
+    }
+
+    function SetInputType(selected_type) {
+        var field = document.getElementById("input_txt");               
+        if (selected_type.value == "Email") {
+            field.setAttribute('TYPE', 'Email');
+        }
+        else if (selected_type.value == "Number") {
+            field.setAttribute('TYPE', 'Number');
+        }
+        else if (selected_type.value == "Date") {
+            field.setAttribute('TYPE', 'date');
+        }  
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="page-footer pt-0 mt-15 rgba-stylish-light">
+
+    <!-- Copyright -->
+    <div class="footer-copyright py-3 text-center">
+      <div class="container-fluid">
+        © 2020 Copyright: <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> Hexageeks</a>
+      </div>
+    </div>
+
+  </footer>
+  <!-- Footer -->
+<script>
+  	document.querySelector('footer').className += ' fixed-bottom'</script>
+  <!-- SCRIPTS -->
+  <!-- HandleBar URL -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+  <!-- Initializations -->
+  <script>
+
+    // SideNav Initialization
+    $(".button-collapse").sideNav();
+
+    var container = document.querySelector('.custom-scrollbar');
+    Ps.initialize(container, {
+      wheelSpeed: 2,
+      wheelPropagation: true,
+      minScrollbarLength: 20
+    });
+
+    $(function () {
+      $('#dark-mode').on('click', function (e) {
+
+        e.preventDefault();
+
+
+        $('#img-black').toggleClass('invisible-img');
+        $('#img-white').toggleClass('visible-img');
+        $('footer, .card').toggleClass('dark-card-admin');
+        $('body, .navbar').toggleClass('white-skin navy-blue-skin');
+        $(this).toggleClass('white text-dark btn-outline-black');
+        $('body').toggleClass('dark-bg-admin');
+        $('h6, .card, p, td, th, i, li a, h4, input, label').not('#slide-out i, #slide-out a, .dropdown-item i, .dropdown-item').toggleClass('text-white');
+        $('.btn-dash').toggleClass('grey blue').toggleClass('lighten-3 darken-3');
+        $('.gradient-card-header').toggleClass('white black lighten-4');
+        $('.list-panel a').toggleClass('navy-blue-bg-a text-white').toggleClass('list-group-border');
+        $('.custom-dark').toggleClass('white-text unique-color-dark lighten-3 darken-3 text-white')
+      });
+    });
+
+    //doughnut
+    var ctxD = document.getElementById("doughnutChart").getContext('2d');
+    var myLineChart = new Chart(ctxD, {
+      type: 'doughnut',
+      data: {
+        labels: ["Pending", "Signed", "Rejected"],
+        datasets: [{
+          data: [3, 5, 2],
+          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C"],
+          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870"]
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+  </script>
+
+</body>
+
+</html>
